@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Pytania</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+        <h2>Lista pytań</h2>
+
+        <table>
+            <tr>
+                <th>Pytanie</th>
+                <th>Odpowiedź A</th>
+                <th>Odpowiedź B</th>
+				<th>Odpowiedź C</th>
+            </tr>
+            
+            <tr th:each="pytanie : ${pytania}">
+				<td th:text="${pytanie.pytanie}">Pytanie</td>
+                <td th:text="${pytanie.odpowiedzA}">Odpowiedź A</td>
+                <td th:text="${pytanie.odpowiedzB}">Odpowiedź B</td>
+                <td th:text="${pytanie.odpowiedzC}">Odpowiedź C</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
